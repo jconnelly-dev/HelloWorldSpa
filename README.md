@@ -13,18 +13,18 @@ Access: [http://localhost:5000](http://localhost:5000)
 ## 📦 Docker
 ```bash
 docker build -t helloworld-spa .
-docker run -p 8080:8080 helloworld-spa
+docker run -d --name HelloWorldSpa -p 8080:8080 helloworldspa
 ```
 
 ## 🚢 Deploy to Heroku
 ```bash
+heroku login
 heroku container:login
-heroku create your-app-name
 
-docker tag helloworld-spa registry.heroku.com/your-app-name/web
-docker push registry.heroku.com/your-app-name/web
-heroku container:release web -a your-app-name
-heroku open -a your-app-name
+docker tag helloworldspa registry.heroku.com/heroku-hello-world-app/web
+docker push registry.heroku.com/heroku-hello-world-app/web
+heroku container:release web -a heroku-hello-world-app
+heroku open -a heroku-hello-world-app
 ```
 
 ## 📁 Project Structure
