@@ -7,8 +7,9 @@ A minimalist Single Page Application using ASP.NET Core 9 as a static file host,
 npm install -g typescript
 npm install
 dotnet build
+dotnet run --launch-profile http
 ```
-Access: [http://localhost:5000](http://localhost:5000)
+Access: [http://localhost:8080](http://localhost:8080)
 
 ## 📦 Docker
 ```bash
